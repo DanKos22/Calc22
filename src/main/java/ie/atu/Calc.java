@@ -6,50 +6,37 @@ public class Calc
 {
 
     public static void main(String[] args) {
-        add();
-        delete();
-        multiply();
-    }
-
-    // Add two numbers
-    public static void add()
-    {
         System.out.println("Please enter your first number: ");
         Scanner inputs = new Scanner(System.in);
         int firstNum = inputs.nextInt();
 
-        System.out.println("Please enter the second number: ");
+        System.out.println("\nPlease enter your second number: ");
         int secondNum = inputs.nextInt();
+        add(firstNum, secondNum);
+        delete(firstNum, secondNum);
+        multiply(firstNum, secondNum);
+    }
 
+    // Add two numbers
+    public static void add(int firstNum, int secondNum)
+    {
         int total = firstNum + secondNum;
-        System.out.println("The total is " + total);
+        System.out.println("\nThe total is " + total);
     }
 
     // Subtract two numbers
-    public static void delete()
+    public static void delete(int firstNum, int secondNum)
     {
-        System.out.println("Please enter your third number: ");
-        Scanner inputs = new Scanner(System.in);
-        int firstNumber = inputs.nextInt();
-
-        System.out.println("Please enter the fourth number: ");
-        int secondNumber = inputs.nextInt();
-
-        int delete = firstNumber - secondNumber;
-        System.out.println("The subtraction is " + delete);
+        System.out.println();
+        int delete = firstNum - secondNum;
+        System.out.println("\nThe subtraction is " + delete);
     }
 
 
     // Multiply two numbers
-    public static void multiply()
+    public static void multiply(int firstNum, int secondNum)
     {
-        System.out.println("Please enter your fifth number: ");
-        Scanner inputs = new Scanner(System.in);
-        int oneNum = inputs.nextInt();
-
-        System.out.println("Please enter the sixth number: ");
-        int twoNum = inputs.nextInt();
-        int multiple = oneNum * twoNum;
-        System.out.println("The multiple is " + multiple);
+        int multiple = firstNum * secondNum;
+        System.out.println("\nThe multiple is " + multiple);
     }
 }
